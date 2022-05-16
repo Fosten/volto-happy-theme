@@ -1,0 +1,5 @@
+@import (less) "~slick-carousel/slick/slick.css";
+@import (less) "~slick-carousel/slick/slick-theme.css";
+
+body {background:#007bb1 !important;}
+#page-document {padding-right:1em; padding-left:1em; background: white; border-left: 1px solid lightgray; border-right: 1px solid lightgray;}
