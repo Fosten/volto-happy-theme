@@ -1,5 +1,34 @@
 @import (less) "~slick-carousel/slick/slick.css";
 @import (less) "~slick-carousel/slick/slick-theme.css";
 
+/* Header */
+.logo {font-size:22px;}
+.logo a {color: red;}
+img.ui.image {display:inline-block; width:100px;}
+.navigation .ui.secondary.pointing.menu .item {color: black !important; margin: 0 1em 0 0; padding-right: .7em; padding-left: .7em;}
+
+/* Content */
 body {background:#007bb1 !important;}
 #page-document {padding-right:1em; padding-left:1em; background: white; border-left: 1px solid lightgray; border-right: 1px solid lightgray;}
+
+/* Footer */
+.ui.inverted.grey.segment {
+background-color: #f4f0ec !important;
+line-height:2em;
+font-size:1.2em;
+display:flex;
+align-items:center;
+}
+#footer {font-size: 10px;}
+#footer h2 {margin: 0;}
+#footer a {display:inline-block; padding: .25em; color:white; border-bottom:none;}
+#footer a:hover {background:white; color:#006b96 !important; border-radius:1em;}
+#footer .ui.segment {margin:0; padding:0;}
+.footersitemap {display:flex; width:100%; border-bottom: thin solid white; padding-bottom:1em;}
+.footersitemap ul {list-style-type:none; padding-left:0; margin:0;}
+.footercol1 {width:25%;}
+.footercol2, .footercol3, .footercol4 {flex-grow:1;}
+.footerbar {display: flex; width:100%; padding-top:.5em;}
+.companyinfo {display: flex; width:100%;}
+.email {width:25%;}
+.youtube, .twitter, .facebook, .accessibility {flex-grow:1;}
