@@ -62,7 +62,7 @@
    <li><a href="/fantasy-leagues/test5">Test5</a></li></ul>
  </div>
  <div className="footercol4">
-  <div className="logo"><Logo />
+  <div className="logo"><Logo /><a href="/">Happy Baseball</a>
   <div className="slogan">"Baseball makes me happy."</div>
  </div>
  </div></div>
