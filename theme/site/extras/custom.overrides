@@ -13,7 +13,7 @@ body {background:#007bb1 !important;}
 
 /* Footer */
 .ui.inverted.grey.segment {
-background-color: #f4f0ec !important;
+background-color: #68778d !important;
 line-height:2em;
 font-size:1.2em;
 display:flex;
