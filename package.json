@@ -19,14 +19,14 @@
     "volto-form-block"
   ],
   "dependencies": {
-    "@eeacms/volto-columns-block": "4.4.13",
-    "@kitconcept/volto-blocks-grid": "2.4.1",
+    "@eeacms/volto-columns-block": "*",
+    "@kitconcept/volto-blocks-grid": "*",
     "@plone/scripts": "*",
-    "react-slick": "0.28.1",
-    "slick-carousel": "1.8.1",
-    "volto-form-block": "2.1.2"
+    "react-slick": "*",
+    "slick-carousel": "*",
+    "volto-form-block": "*"
   },
   "devDependencies": {
-    "mrs-developer": "1.6.1"
+    "mrs-developer": "*"
   }
 }
