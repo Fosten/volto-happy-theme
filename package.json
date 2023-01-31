@@ -24,7 +24,8 @@
     "@plone/scripts": "*",
     "react-slick": "*",
     "slick-carousel": "*",
-    "volto-form-block": "*"
+    "volto-form-block": "*",
+    "volto-subblocks": "^2.0.0"
   },
   "devDependencies": {
     "mrs-developer": "*"
