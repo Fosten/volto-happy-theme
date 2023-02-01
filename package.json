@@ -15,15 +15,11 @@
   },
   "addons": [
     "@eeacms/volto-columns-block",
-    "@kitconcept/volto-blocks-grid",
     "volto-form-block"
   ],
   "dependencies": {
     "@eeacms/volto-columns-block": "*",
-    "@kitconcept/volto-blocks-grid": "*",
     "@plone/scripts": "*",
-    "react-slick": "*",
-    "slick-carousel": "*",
     "volto-form-block": "*",
     "volto-subblocks": "^2.0.0"
   },
