@@ -8,7 +8,7 @@
     text-shadow: 0.5px 0.5px 1px black;
 }
 .ui.basic.segment.header-wrapper {
-    radial-gradient(circle 150px at 22% 45%, white, yellow, lightyellow, #add8e6);
+    background-image: radial-gradient(circle 150px at 22% 45%, white, yellow, lightyellow, #add8e6);
 }
 img.ui.image {display:inline-block; width:100px;}
 .navigation .ui.secondary.pointing.menu .item {
