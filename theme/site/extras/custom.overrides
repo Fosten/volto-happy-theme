@@ -18,6 +18,7 @@ img.ui.image {display:inline-block; width:100px;}
     padding-left: .7em;
 }
 .ui.secondary.segment {background: #add83b;}
+
 /* Content */
 body.cms-ui .ui.basic.segment.content-area {
     -webkit-linear-gradient(top, #add8e6 0%,#ffe0cc 10%,lightyellow 30%,lightyellow 70%,darkseagreen 90%,darkseagreen 100%);
@@ -31,6 +32,9 @@ body.cms-ui .ui.basic.segment.content-area {
 }
 .block.slider:not(.inner):not([role=presentation]) {
     padding-right:1em;
+}
+#page-edit .ui.container {
+  background: white;
 }
 
 /* Footer */
