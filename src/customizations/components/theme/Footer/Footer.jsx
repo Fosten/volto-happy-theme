@@ -37,35 +37,30 @@
        <Segment basic inverted color="grey" className="discreet">
  <div className="footersitemap">
    <div className="footercol1">
- <h2><a href="/articles">Articles</a></h2>
-     <ul><li><a href="/articles/test1">Test1</a></li>
-         <li><a href="/articles/test2">Test2</a></li>
-         <li><a href="/articles/test3">Test3</a></li>
-         <li><a href="/articles/test4">Test4</a></li>
-         <li><a href="/articles/test5">Test5</a></li>
+   <h2><a href="/rankings">Rankings</a></h2>
+     <ul><li><a href="/rankings/redraft-rankings">Re-draft Rankings</a></li>
+     <li><a href="/rankings/dynasty-rankings">Dynasty Rankings</a></li>
+     <li><a href="/rankings/top-25-under-25">Top 25 Under 25</a></li></ul>
+   </div>
+   <div className="footercol2">
+   <h2><a href="/leagues">Leagues</a></h2>
+     <ul><li><a href="/leagues/league-rules/calendar">Calendar</a></li>
+     <li><a href="/leagues/league-rules/draftime-primer">Draftime Primer</a></li>
+     <li><a href="/leagues/standings">Standings</a></li></ul>
+   </div>
+   <div className="footercol3">
+     <h2><a href="/articles">Collectibles</a></h2>
+     <ul><li><a href="/collectibles/baseball-cards">Baseball Cards</a></li>
+         <li><a href="/collectibles/funko-pops">Funko Pops</a></li>
+         <li><a href="/collectibles/danbury-mint">Danbury Mint</a></li>
      </ul>
+   </div>
+   <div className="footercol4">
+     <div className="logo"><Logo /><a href="/">Happy Baseball</a>
+       <div className="slogan">"Baseball makes me happy."</div>
+     </div>
+   </div>
  </div>
- <div className="footercol2">
- <h2><a href="/rankings">Rankings</a></h2>
-   <ul><li><a href="/rankings/test1">Test1</a></li>
-   <li><a href="/rankings/test2">Test2</a></li>
-   <li><a href="/rankings/test3">Test3</a></li>
-   <li><a href="/rankings/test4">Test4</a></li>
-   <li><a href="/rankings/test5">Test5</a></li></ul>
- </div>
- <div className="footercol3">
- <h2><a href="/fantasy-leagues">Fantasy Leagues</a></h2>
-   <ul><li><a href="/fantasy-leagues/test1">Test1</a></li>
-   <li><a href="/fantasy-leagues/test2">Test2</a></li>
-   <li><a href="/fantasy-leagues/test3">Test3</a></li>
-   <li><a href="/fantasy-leagues/test4">Test4</a></li>
-   <li><a href="/fantasy-leagues/test5">Test5</a></li></ul>
- </div>
- <div className="footercol4">
-  <div className="logo"><Logo /><a href="/">Happy Baseball</a>
-  <div className="slogan">"Baseball makes me happy."</div>
- </div>
- </div></div>
        </Segment>
        <Segment basic inverted color="grey" className="discreet">
          {/* wrap in div for a11y reasons: listitem role cannot be on the <a> element directly */}
