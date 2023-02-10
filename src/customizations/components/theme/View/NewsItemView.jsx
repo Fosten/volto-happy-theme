@@ -11,6 +11,7 @@ import {
   flattenToAppURL,
   flattenHTMLToAppURL,
 } from '@plone/volto/helpers';
+import { FormattedDate } from '@plone/volto/components';
 import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
 
 /**
@@ -22,6 +23,9 @@ import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
 const NewsItemView = ({ content }) =>
   hasBlocksData(content) ? (
     <div id="page-document" className="ui container viewwrapper event-view">
+       <p>
+        <FormattedDate date={content.created} includeTime />
+      </p>
       <RenderBlocks content={content} />
     </div>
   ) : (

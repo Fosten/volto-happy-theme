@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ConditionalLink, UniversalLink } from '@plone/volto/components';
+import { ConditionalLink, UniversalLink, FormattedDate } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 import { isInternalURL } from '@plone/volto/helpers/Url/Url';
@@ -27,6 +27,11 @@ const DefaultTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
             <ConditionalLink item={item} condition={!isEditMode}>
               <div className="listing-body">
                 <h4>{item.title ? item.title : item.id}</h4>
+                {item.review_state === 'published' && item.effective && item.['@type'] == 'News Item' && (
+                  <p className="discreet">
+                    <FormattedDate date={item.effective} includeTime />
+                  </p>
+                )}
                 <p>{item.description}</p>
               </div>
             </ConditionalLink>
