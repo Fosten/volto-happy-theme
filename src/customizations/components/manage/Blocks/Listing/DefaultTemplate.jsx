@@ -27,7 +27,7 @@ const DefaultTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
             <ConditionalLink item={item} condition={!isEditMode}>
               <div className="listing-body">
                 <h4>{item.title ? item.title : item.id}</h4>
-                {item.review_state === 'published' && item.effective && item.['@type'] == 'News Item' && (
+                {item.review_state === 'published' && item.effective && item['@type'] === 'News Item' && (
                   <p className="discreet">
                     <FormattedDate date={item.effective} includeTime />
                   </p>
