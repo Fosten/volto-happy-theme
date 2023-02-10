@@ -34,7 +34,6 @@ const RenderSeparateBlocks = (props) => {
       {map(content[blocksLayoutFieldname].items, (block) => {
         const Block =
           blocksConfig[content[blocksFieldname]?.[block]?.['@type']]?.view ||
-          ViewTitleBlock;
           ViewDescriptionBlock;
           ViewTextBlock;
 

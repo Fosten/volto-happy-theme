@@ -33,9 +33,9 @@ const NewsItemView = ({ content }) =>
           {content.subtitle && ` - ${content.subtitle}`}
         </h1>
       )}
-      {content.creators && (
+      {content.Creator && (
         <p className="documentbyLine">
-          {content.creators} on <FormattedDate date={content.effective} />
+          {content.Creator} on <FormattedDate date={content.effective} />
         </p>
       )}
       {content.description && (
