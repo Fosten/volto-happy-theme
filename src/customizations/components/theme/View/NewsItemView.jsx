@@ -12,7 +12,7 @@ import {
   flattenHTMLToAppURL,
 } from '@plone/volto/helpers';
 import { FormattedDate, Creator } from '@plone/volto/components';
-import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
+import RenderSeparateBlocks from '@plone/volto/components/theme/View/RenderSeparateBlocks';
 
 /**
  * NewsItemView view component class.
@@ -23,7 +23,7 @@ import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
 const NewsItemView = ({ content }) =>
   hasBlocksData(content) ? (
     <div id="page-document" className="ui container viewwrapper event-view">
-      <RenderBlocks content={content} />
+      <RenderSeparateBlocks content={content} />
     </div>
   ) : (
     <Container className="view-wrapper">
@@ -33,9 +33,13 @@ const NewsItemView = ({ content }) =>
           {content.subtitle && ` - ${content.subtitle}`}
         </h1>
       )}
+      {content.creators && (
+        <p className="documentbyLine">
+          {content.creators} on <FormattedDate date={content.effective} />
+        </p>
+      )}
       {content.description && (
         <p className="documentDescription">
-          {content.Creator} on <FormattedDate date={content.effective} />
           {content.description}</p>
       )}
       {content.image && (
@@ -70,6 +74,7 @@ NewsItemView.propTypes = {
   content: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
+    creators: PropTypes.string,
     text: PropTypes.shape({
       data: PropTypes.string,
     }),
