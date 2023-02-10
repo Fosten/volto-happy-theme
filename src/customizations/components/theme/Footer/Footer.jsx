@@ -68,7 +68,7 @@
            <div className="companyinfo">
              <div className="email"><a href="mailto:info@happybaseball.com">info@happybaseball.com</a></div>
              <div className="youtube"></div>
-             <div className="twitter"></div>
+             <div className="twitter"><a href="https://plone.org" target="_blank">Powered by Plone</a></div>
              <div className="facebook"></div>
              <div className="accessibility"><a href="/accessibility">Accessibility</a></div>
            </div>
