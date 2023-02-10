@@ -15,6 +15,14 @@ img.ui.image {
     display:inline-block; 
     width:100px;
 }
+.ui.breadcrumb a, .ui.breadcrumb .section {
+    color:black;
+    padding:4px;
+    border-radius:1em;
+}
+.ui.breadcrumb a:hover, .ui.breadcrumb .section:hover {background-color:white;}
+
+/* Navigation */
 .navigation .ui.secondary.pointing.menu .item {
     color: black !important;
     margin: 0 1em 0 0;
@@ -22,6 +30,8 @@ img.ui.image {
     padding-left: .7em;
     border-radius: 1em;
 }
+.navigation .ui.secondary.pointing.menu .active.item {border-color: white;}
+.navigation .ui.secondary.pointing.menu .active.item:hover {border-color: white;}
 .ui.secondary.segment {background: #add8e6;}
 .ui.vertical.segment {border-bottom: none;}
 ui.secondary.pointing.menu .dropdown.item:hover, .ui.secondary.pointing.menu .link.item:hover, .ui.secondary.pointing.menu a.item:hover {
@@ -45,7 +55,7 @@ body.siteroot h1.documentFirstHeading {display:none;}
     padding-left: 1.5em;
     padding-right: 1.5em;
 }
-#page-edit .ui.container {
+div#page-edit, div#page-add {
     background: white;
 }
 
