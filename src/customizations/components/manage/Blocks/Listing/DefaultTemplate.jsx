@@ -29,7 +29,7 @@ const DefaultTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
                 <h4>{item.title ? item.title : item.id}</h4>
                 {item.review_state === 'published' && item.effective && item['@type'] === 'News Item' && (
                   <p className="discreet">
-                    <FormattedDate date={item.effective} includeTime />
+                    {item.creator} - <FormattedDate date={item.effective} />
                   </p>
                 )}
                 <p>{item.description}</p>

@@ -23,9 +23,6 @@ import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
 const NewsItemView = ({ content }) =>
   hasBlocksData(content) ? (
     <div id="page-document" className="ui container viewwrapper event-view">
-       <p>
-        <FormattedDate date={content.created} includeTime />
-      </p>
       <RenderBlocks content={content} />
     </div>
   ) : (
@@ -35,6 +32,11 @@ const NewsItemView = ({ content }) =>
           {content.title}
           {content.subtitle && ` - ${content.subtitle}`}
         </h1>
+      )}
+      {content.creator && (
+        <p>
+          By {content.creator} on <FormattedDate date={content.created} />
+        </p>
       )}
       {content.description && (
         <p className="documentDescription">{content.description}</p>
