@@ -1,9 +1,6 @@
 @import (less) "~slick-carousel/slick/slick.css";
 @import (less) "~slick-carousel/slick/slick-theme.css";
 
-/* Body */
-body {zoom:inherit;}
-
 /* Header */
 .logo {font-size:22px;}
 .logo a {
@@ -14,7 +11,10 @@ body {zoom:inherit;}
     background-image: radial-gradient(circle 150px at 25% 15%, white, yellow, lightyellow, #add8e6);
     padding-bottom: 2em;
 }
-img.ui.image {display:inline-block; width:100px;}
+img.ui.image {
+    display:inline-block; 
+    width:100px;
+}
 .navigation .ui.secondary.pointing.menu .item {
     color: black !important;
     margin: 0 1em 0 0;
@@ -49,6 +49,11 @@ body.siteroot h1.documentFirstHeading {display:none;}
     background: white;
 }
 
+#page-search .ui.container {
+    background: white;
+    padding: 1em;
+}
+
 /* Footer */
 .ui.inverted.grey.segment {
     background-color: #A35502 !important;
@@ -57,18 +62,48 @@ body.siteroot h1.documentFirstHeading {display:none;}
     display:flex;
     align-items:center;
 }
-#footer {font-size: 10px; text-shadow: 0.5px 0.5px 1px black;}
+#footer {
+    font-size: 10px;
+    text-shadow: 0.5px 0.5px 1px black;
+}
 #footer h2 {margin: 0;}
-#footer a {display:inline-block; padding: .25em; color:white; border-bottom:none;}
-#footer a:hover {background:white; color:#006b96 !important; border-radius:1em; text-shadow: none;}
-#footer .footercol3 img {width: 200px;}
+#footer a {
+    display:inline-block;
+    padding: .25em;
+    color:white;
+    border-bottom:none;
+}
+#footer a:hover {
+    background:white;
+    color:#006b96 !important;
+    border-radius:1em;
+    text-shadow: none;
+}
+#footer .footercol3 img {width: 110px;}
 #footer .footercol3 a:hover {background: grey;}
 #footer .ui.segment {margin:0; padding:0;}
-.footersitemap {display:flex; width:100%; border-bottom: thin solid white; padding-bottom:1em;}
-.footersitemap ul {list-style-type:none; padding-left:0; margin:0;}
+.footersitemap {
+    display:flex;
+    width:100%;
+    border-bottom:
+    thin solid white;
+    padding-bottom:1em;
+}
+.footersitemap ul {
+    list-style-type:none;
+    padding-left:0;
+    margin:0;
+}
 .footercol1 {width:25%;}
 .footercol2, .footercol3, .footercol4 {flex-grow:1;}
-.footerbar {display: flex; width:100%; padding-top:.5em;}
-.companyinfo {display: flex; width:100%;}
+.footerbar {
+    display: flex;
+    width:100%;
+    padding-top:.5em;
+}
+.companyinfo {
+    display: flex;
+    width:100%;
+}
 .email {width:25%;}
 .youtube, .twitter, .facebook, .accessibility {flex-grow:1;}
