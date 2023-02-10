@@ -49,16 +49,16 @@
      <li><a href="/leagues/standings">Standings</a></li></ul>
    </div>
    <div className="footercol3">
-     <h2><a href="/articles">Collectibles</a></h2>
+     <div className="logo"><a href="/"><img src="/images/homeplate-logo.png/@@images/image-512-aa2271fd4debd8e30a62ad981b25e556.png" alt="Homeplate logo"/></a>
+       <div className="slogan">"Like a pop fly in the sun."</div>
+     </div>
+   </div>
+   <div className="footercol4">
+     <h2><a href="/collectibles">Collectibles</a></h2>
      <ul><li><a href="/collectibles/baseball-cards">Baseball Cards</a></li>
          <li><a href="/collectibles/funko-pops">Funko Pops</a></li>
          <li><a href="/collectibles/danbury-mint">Danbury Mint</a></li>
      </ul>
-   </div>
-   <div className="footercol4">
-     <div className="logo"><Logo /><a href="/">Happy Baseball</a>
-       <div className="slogan">"Baseball makes me happy."</div>
-     </div>
    </div>
  </div>
        </Segment>
@@ -67,9 +67,9 @@
          <div className="footerbar">
            <div className="companyinfo">
              <div className="email"><a href="mailto:info@happybaseball.com">info@happybaseball.com</a></div>
-             <div className="youtube"><a href="http://www.youtube.com/" target="_blank">Subscribe to us on Youtube</a></div>
-             <div className="twitter"><a href="http://www.twitter.com/" target="_blank">Follow us on Twitter</a></div>
-             <div className="facebook"><a href="http://www.facebook.com/" target="_blank">Connect with us on Facebook</a></div>
+             <div className="youtube"></div>
+             <div className="twitter"></div>
+             <div className="facebook"></div>
              <div className="accessibility"><a href="/accessibility">Accessibility</a></div>
            </div>
          </div>

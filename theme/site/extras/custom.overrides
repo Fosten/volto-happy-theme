@@ -1,6 +1,9 @@
 @import (less) "~slick-carousel/slick/slick.css";
 @import (less) "~slick-carousel/slick/slick-theme.css";
 
+/* Body */
+body {zoom:inherit;}
+
 /* Header */
 .logo {font-size:22px;}
 .logo a {
@@ -24,7 +27,7 @@ img.ui.image {display:inline-block; width:100px;}
 /* Content */
 .ui.basic.segment.content-area {
     margin: 0em;
-    background: -webkit-linear-gradient(top,#add8e6,lightgrey 10%, #8fbc8f 20%,#8fbc8f 80%, #A35502);
+    background: -webkit-linear-gradient(top,#add8e6,lightgrey 10%, #8fbc8f 20%,#A35502 80%, #A35502);
 }
 body.siteroot h1.documentFirstHeading {display:none;}
 #page-document {
@@ -54,6 +57,7 @@ body.siteroot h1.documentFirstHeading {display:none;}
 #footer h2 {margin: 0;}
 #footer a {display:inline-block; padding: .25em; color:white; border-bottom:none;}
 #footer a:hover {background:white; color:#006b96 !important; border-radius:1em; text-shadow: none;}
+#footer .footercol3 a:hover {background: grey;}
 #footer .ui.segment {margin:0; padding:0;}
 .footersitemap {display:flex; width:100%; border-bottom: thin solid white; padding-bottom:1em;}
 .footersitemap ul {list-style-type:none; padding-left:0; margin:0;}
