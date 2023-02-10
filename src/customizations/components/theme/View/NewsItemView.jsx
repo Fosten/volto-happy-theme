@@ -12,7 +12,7 @@ import {
   flattenHTMLToAppURL,
 } from '@plone/volto/helpers';
 import { FormattedDate, Creator } from '@plone/volto/components';
-import RenderSeparateBlocks from '@plone/volto/components/theme/View/RenderSeparateBlocks';
+import RenderSeparateBlocks from '@Fosten/volto-happy-theme/components/View/RenderSeparateBlocks';
 
 /**
  * NewsItemView view component class.
