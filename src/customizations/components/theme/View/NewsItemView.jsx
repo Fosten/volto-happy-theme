@@ -11,7 +11,7 @@ import {
   flattenToAppURL,
   flattenHTMLToAppURL,
 } from '@plone/volto/helpers';
-import { FormattedDate } from '@plone/volto/components';
+import { FormattedDate, Creator } from '@plone/volto/components';
 import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
 
 /**
@@ -33,13 +33,10 @@ const NewsItemView = ({ content }) =>
           {content.subtitle && ` - ${content.subtitle}`}
         </h1>
       )}
-      {content.creator && (
-        <p>
-          By {content.creator} on <FormattedDate date={content.created} />
-        </p>
-      )}
       {content.description && (
-        <p className="documentDescription">{content.description}</p>
+        <p className="documentDescription">
+          {content.Creator} on <FormattedDate date={content.effective} />
+          {content.description}</p>
       )}
       {content.image && (
         <Image
