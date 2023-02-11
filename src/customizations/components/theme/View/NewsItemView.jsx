@@ -34,14 +34,10 @@ const NewsItemView = ( props ) => {
           {content.subtitle && ` - ${content.subtitle}`}
         </h1>
       )}
-      {content.Creator && (
-        <p className="documentbyLine">
-          {content.Creator} on <FormattedDate date={content.effective} />
-        </p>
-      )}
       {content.description && (
-        <p className="documentDescription">
-          {content.description}</p>
+        <div className="NewsItemDescription">
+        <p className="documentByLine">{content.creators} on <FormattedDate date={content.effective} /></p>
+        <p className="documentDescription">{content.description}</p></div>
       )}
       {content.image && (
         <Image
@@ -76,7 +72,6 @@ NewsItemView.propTypes = {
   content: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
-    Creator: PropTypes.string,
     text: PropTypes.shape({
       data: PropTypes.string,
     }),
