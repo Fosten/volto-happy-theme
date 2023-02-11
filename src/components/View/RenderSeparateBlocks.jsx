@@ -9,8 +9,7 @@ import {
 } from '@plone/volto/helpers';
 import StyleWrapper from '@plone/volto/components/manage/Blocks/Block/StyleWrapper';
 import config from '@plone/volto/registry';
-import { ViewTitleBlock, ViewTextBlock} from '@plone/volto/components';
-import { ViewDescriptionBlock} from '@Fosten/volto-happy-theme/components/Description';
+import { ViewTitleBlock, ViewDescriptionBlock, ViewTextBlock} from '@plone/volto/components';
 
 const messages = defineMessages({
   unknownBlock: {
