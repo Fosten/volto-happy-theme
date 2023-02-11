@@ -74,7 +74,7 @@ NewsItemView.propTypes = {
   content: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
-    creators: PropTypes.string,
+    Creator: PropTypes.string,
     text: PropTypes.shape({
       data: PropTypes.string,
     }),
