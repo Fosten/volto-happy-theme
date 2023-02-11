@@ -1,6 +1,6 @@
 /**
  * View description block.
- * @module components/manage/Description/DescriptionBlockView
+ * @module components/Description/DescriptionBlockView
  */
 
 import React from 'react';
