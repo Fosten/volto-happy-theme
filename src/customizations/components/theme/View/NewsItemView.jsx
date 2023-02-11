@@ -25,9 +25,7 @@ const NewsItemView = ( props ) => {
 
   return (
     <div id="page-document" className="ui container viewwrapper event-view">
-      <RenderSeparateBlocks 
-        {...props}
-      />
+      <RenderSeparateBlocks />
 
     <Container className="view-wrapper">
       {content.title && (
