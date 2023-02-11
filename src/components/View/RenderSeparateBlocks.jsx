@@ -9,7 +9,7 @@ import {
 } from '@plone/volto/helpers';
 import StyleWrapper from '@plone/volto/components/manage/Blocks/Block/StyleWrapper';
 import config from '@plone/volto/registry';
-import { ViewTitleBlock, ViewDescriptionBlock, ViewTextBlock} from '@plone/volto/components';
+import { ViewTextBlock } from '@plone/volto/components';
 
 const messages = defineMessages({
   unknownBlock: {
@@ -34,7 +34,7 @@ const RenderSeparateBlocks = (props) => {
       {map(content[blocksLayoutFieldname].items, (block) => {
         const Block =
           blocksConfig[content[blocksFieldname]?.[block]?.['@type']]?.view ||
-          ViewDescriptionBlock;
+          ViewDescriptionBlock2;
           ViewTextBlock;
 
         const blockData = applyBlockDefaults({
