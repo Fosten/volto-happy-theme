@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
  * @class View
  * @extends Component
  */
-const DescriptionBlockView = ({ properties, metadata }) => {
+const ViewDescriptionBlock2 = ({ properties, metadata }) => {
   return (
     <p className="documentDescription">
       {(metadata || properties)['description'] || ''}
@@ -24,9 +24,9 @@ const DescriptionBlockView = ({ properties, metadata }) => {
  * @property {Object} propTypes Property types.
  * @static
  */
-DescriptionBlockView.propTypes = {
+ViewDescriptionBlock2.propTypes = {
   properties: PropTypes.objectOf(PropTypes.any).isRequired,
   metadata: PropTypes.objectOf(PropTypes.any),
 };
 
-export default DescriptionBlockView;
+export default ViewDescriptionBlock2;

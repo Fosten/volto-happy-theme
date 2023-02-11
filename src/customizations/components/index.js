@@ -188,7 +188,6 @@ export EditMapBlock from '@plone/volto/components/manage/Blocks/Maps/Edit';
 export EditHTMLBlock from '@plone/volto/components/manage/Blocks/HTML/Edit';
 
 export ViewDefaultBlock from '@plone/volto/components/manage/Blocks/Block/DefaultView';
-export ViewDescriptionBlock from '@Fosten/volto-happy-theme/customizations/components/Blocks/Description/View';
 export ViewTitleBlock from '@plone/volto/components/manage/Blocks/Title/View';
 export ViewToCBlock from '@plone/volto/components/manage/Blocks/ToC/View';
 export ViewTextBlock from '@plone/volto/components/manage/Blocks/Text/View';
@@ -222,3 +221,4 @@ export Component from '@plone/volto/components/theme/Component/Component';
 
 export App from '@plone/volto/components/theme/App/App';
 export RenderSeparateBlocks from '@Fosten/volto-happy-theme/components/View/RenderSeparateBlocks';
+export ViewDescriptionBlock2 from '@Fosten/volto-happy-theme/customizations/components/manage/Blocks/Description/View';

@@ -20,12 +20,15 @@ import RenderSeparateBlocks from '@Fosten/volto-happy-theme/components/View/Rend
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
-const NewsItemView = ({ content }) =>
-  hasBlocksData(content) ? (
+const NewsItemView = ( props ) => {
+  const { content } = props;
+
+  return (
     <div id="page-document" className="ui container viewwrapper event-view">
-      <RenderSeparateBlocks content={content} />
-    </div>
-  ) : (
+      <RenderSeparateBlocks 
+        {...props}
+      />
+
     <Container className="view-wrapper">
       {content.title && (
         <h1 className="documentFirstHeading">
@@ -62,9 +65,10 @@ const NewsItemView = ({ content }) =>
           }}
         />
       )}
-    </Container>
-  );
+    </Container>    </div>
 
+  );
+        };
 /**
  * Property types.
  * @property {Object} propTypes Property types.
