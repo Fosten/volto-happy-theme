@@ -36,7 +36,7 @@ const NewsItemView = ( props ) => {
       )}
       {content.description && (
         <div className="NewsItemDescription">
-        <p className="documentByLine">{content.creators} on <FormattedDate date={content.effective} /></p>
+        <p className="documentByLine">By {content.creators} on <FormattedDate date={content.effective} /></p>
         <p className="documentDescription">{content.description}</p></div>
       )}
       {content.image && (
