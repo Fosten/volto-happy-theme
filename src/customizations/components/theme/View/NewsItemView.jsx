@@ -21,12 +21,10 @@ import config from '@plone/volto/registry';
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
-const NewsItemView = ({ props, content }) => {
-const {blocksConfig} = config.blocks;
-const customBlocksConfig = {...blocksConfig, description: {...blocksConfig.description, view: (props) => <div>I'm a custom description</div>}}
+const NewsItemView = ({content}) => 
   hasBlocksData(content) ? (
     <div id="page-document" className="ui container viewwrapper newsitem-view">
-      <RenderBlocks content={content} {...props } blocksConfig={customBlocksConfig} />
+      <RenderBlocks content={content } />
     </div>
   ) : (
     <Container className="view-wrapper">
@@ -63,9 +61,8 @@ const customBlocksConfig = {...blocksConfig, description: {...blocksConfig.descr
       )}
     </Container>
   );
-return NewsItemView;
-        }
-/**
+
+  /**
  * Property types.
  * @property {Object} propTypes Property types.
  * @static
