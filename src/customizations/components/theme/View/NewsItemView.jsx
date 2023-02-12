@@ -11,9 +11,9 @@ import {
   flattenToAppURL,
   flattenHTMLToAppURL,
 } from '@plone/volto/helpers';
-import { FormattedDate } from '@plone/volto/components';
 import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
-import applyConfig from '@Fosten/volto-happy-theme';
+import { FormattedDate } from '@plone/volto/components';
+import config from '@plone/volto/registry';
 
 /**
  * NewsItemView view component class.
@@ -21,10 +21,12 @@ import applyConfig from '@Fosten/volto-happy-theme';
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
-const NewsItemView = ({ content }) => 
+const NewsItemView = ({ props, content }) => {
+const {blocksConfig} = config.blocks;
+const customBlocksConfig = {...blocksConfig, description: {...blocksConfig.description, view: (props) => <div>I'm a custom description</div>}}
   hasBlocksData(content) ? (
     <div id="page-document" className="ui container viewwrapper newsitem-view">
-      <RenderBlocks content={content} {...applyConfig} />
+      <RenderBlocks content={content} {...props } blocksConfig={customBlocksConfig} />
     </div>
   ) : (
     <Container className="view-wrapper">
@@ -35,10 +37,9 @@ const NewsItemView = ({ content }) =>
         </h1>
       )}
       {content.description && (
-        <div className="NewsItemDescription">
-        <p className="documentByLine">By {content.creators} on <FormattedDate date={content.effective} /></p>
-        <p className="documentDescription">{content.description}</p>
-        </div>
+        <p className="documentDescription">
+          {content.description}
+        </p>
       )}
       {content.image && (
         <Image
@@ -62,7 +63,8 @@ const NewsItemView = ({ content }) =>
       )}
     </Container>
   );
-
+return NewsItemView;
+        }
 /**
  * Property types.
  * @property {Object} propTypes Property types.
@@ -79,4 +81,3 @@ NewsItemView.propTypes = {
 };
 
 export default NewsItemView;
-
