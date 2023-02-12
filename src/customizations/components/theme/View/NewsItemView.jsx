@@ -12,8 +12,6 @@ import {
   flattenHTMLToAppURL,
 } from '@plone/volto/helpers';
 import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
-import { FormattedDate } from '@plone/volto/components';
-import config from '@plone/volto/registry';
 
 /**
  * NewsItemView view component class.
@@ -21,7 +19,7 @@ import config from '@plone/volto/registry';
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
-const NewsItemView = ({content}) => 
+const NewsItemView = ({content}) =>
   hasBlocksData(content) ? (
     <div id="page-document" className="ui container viewwrapper newsitem-view">
       <RenderBlocks content={content } />
