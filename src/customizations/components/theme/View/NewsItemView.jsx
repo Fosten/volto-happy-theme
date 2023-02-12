@@ -13,6 +13,7 @@ import {
 } from '@plone/volto/helpers';
 import { FormattedDate } from '@plone/volto/components';
 import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
+import applyConfig from '@Fosten/volto-happy-theme';
 
 /**
  * NewsItemView view component class.
@@ -23,7 +24,7 @@ import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
 const NewsItemView = ({ content }) => 
   hasBlocksData(content) ? (
     <div id="page-document" className="ui container viewwrapper newsitem-view">
-      <RenderBlocks content={content} />
+      <RenderBlocks content={content} {...applyConfig} />
     </div>
   ) : (
     <Container className="view-wrapper">

@@ -6,9 +6,12 @@ export default function applyConfig(config) {
   // Add here your project's configuration here by modifying `config` accordingly
   config.blocks = {
     ...config.blocks,
+    initialBlocks: {
+      "News Item": ['title', 'description', 'text', 'image' ]
+    },
     blocksConfig: {
       ...config.blocks.blocksConfig,
-      ...initialBlocks},
+      ...config.blocks.initialBlocks},
     }
   return config;
 }
