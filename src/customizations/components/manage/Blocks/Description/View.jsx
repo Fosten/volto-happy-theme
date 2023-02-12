@@ -1,32 +1,27 @@
 /**
  * View description block.
- * @module components/Description/DescriptionBlockView
+ * @module components/manage/Blocks/Description/View
  */
 
 import React from 'react';
 import PropTypes from 'prop-types';
 
 /**
- * View description block component.
+ * View description block class.
  * @class View
  * @extends Component
  */
-const ViewDescriptionBlock2 = ({ properties, metadata }) => {
-  return (
-    <p className="documentDescription">
-      {(metadata || properties)['description'] || ''}
-    </p>
-  );
-};
+const View = ({ properties }) => (
+  <p className="documentDescription">{properties.description}</p>
+);
 
 /**
  * Property types.
  * @property {Object} propTypes Property types.
  * @static
  */
-ViewDescriptionBlock2.propTypes = {
+View.propTypes = {
   properties: PropTypes.objectOf(PropTypes.any).isRequired,
-  metadata: PropTypes.objectOf(PropTypes.any),
 };
 
-export default ViewDescriptionBlock2;
+export default View;
