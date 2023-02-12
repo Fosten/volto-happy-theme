@@ -15,13 +15,15 @@
   },
   "addons": [
     "@eeacms/volto-columns-block",
-    "volto-form-block"
+    "volto-form-block",
+    "@eeacms/volto-metadata-block"
   ],
   "dependencies": {
     "@eeacms/volto-columns-block": "*",
     "@plone/scripts": "*",
     "volto-form-block": "*",
-    "volto-subblocks": "^2.0.0"
+    "volto-subblocks": "^2.0.0",
+    "@eeacms/volto-metadata-block": "*"
   },
   "devDependencies": {
     "mrs-developer": "*"
