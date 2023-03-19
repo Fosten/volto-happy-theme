@@ -3,10 +3,10 @@
  * @module components/theme/Header/Header
  */
 
-import React, { Component } from 'react';
-import { Container, Segment } from 'semantic-ui-react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { Container, Segment } from "semantic-ui-react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
 import {
   Anontools,
@@ -14,7 +14,7 @@ import {
   Logo,
   Navigation,
   SearchWidget,
-} from '@plone/volto/components';
+} from "@plone/volto/components";
 
 /**
  * Header component class.
@@ -53,7 +53,8 @@ class Header extends Component {
           <div className="header">
             <div className="logo-nav-wrapper">
               <div className="logo">
-                <Logo /><a href="/">Happy Baseball</a>
+                <Logo />
+                <a href="/">Happy Baseball</a>
               </div>
               <Navigation pathname={this.props.pathname} />
             </div>

@@ -3,15 +3,15 @@
  * @module components/theme/View/NewsItemView
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Container, Image } from 'semantic-ui-react';
+import React from "react";
+import PropTypes from "prop-types";
+import { Container, Image } from "semantic-ui-react";
 import {
   hasBlocksData,
   flattenToAppURL,
   flattenHTMLToAppURL,
-} from '@plone/volto/helpers';
-import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
+} from "@plone/volto/helpers";
+import RenderBlocks from "@plone/volto/components/theme/View/RenderBlocks";
 
 /**
  * NewsItemView view component class.
@@ -19,10 +19,10 @@ import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
-const NewsItemView = ({content}) =>
+const NewsItemView = ({ content }) =>
   hasBlocksData(content) ? (
     <div id="page-document" className="ui container viewwrapper newsitem-view">
-      <RenderBlocks content={content } />
+      <RenderBlocks content={content} />
     </div>
   ) : (
     <Container className="view-wrapper">
@@ -33,9 +33,7 @@ const NewsItemView = ({content}) =>
         </h1>
       )}
       {content.description && (
-        <p className="documentDescription">
-          {content.description}
-        </p>
+        <p className="documentDescription">{content.description}</p>
       )}
       {content.image && (
         <Image
@@ -43,7 +41,7 @@ const NewsItemView = ({content}) =>
           alt={content.title}
           title={content.title}
           src={
-            content.image['content-type'] === 'image/svg+xml'
+            content.image["content-type"] === "image/svg+xml"
               ? flattenToAppURL(content.image.download)
               : flattenToAppURL(content.image.scales.mini.download)
           }
@@ -60,7 +58,7 @@ const NewsItemView = ({content}) =>
     </Container>
   );
 
-  /**
+/**
  * Property types.
  * @property {Object} propTypes Property types.
  * @static

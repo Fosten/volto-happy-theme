@@ -14,6 +14,7 @@
    ```
 
 1. Start Plone backend
+
    ```
    docker run -d --name plone -p 8080:8080 -e SITE=Plone -e PROFILES="profile-plone.restapi:blocks" plone
    ```
@@ -32,25 +33,25 @@
 
 1. Start Volto frontend
 
-* If you already have a volto project, just update `package.json`:
+- If you already have a volto project, just update `package.json`:
 
-   ```JSON
-   "addons": [
-       "@Fosten/volto-happy-theme"
-   ],
+  ```JSON
+  "addons": [
+      "@Fosten/volto-happy-theme"
+  ],
 
-   "dependencies": {
-       "@Fosten/volto-happy-theme": "Fosten/volto-happy-theme"
-   }
-   ```
+  "dependencies": {
+      "@Fosten/volto-happy-theme": "Fosten/volto-happy-theme"
+  }
+  ```
 
-* If not, create one:
+- If not, create one:
 
-   ```
-   npm install -g yo @plone/generator-volto
-   yo @plone/volto my-volto-project --addon @Fosten/volto-happy-theme
-   cd my-volto-project
-   ```
+  ```
+  npm install -g yo @plone/generator-volto
+  yo @plone/volto my-volto-project --addon @Fosten/volto-happy-theme
+  cd my-volto-project
+  ```
 
 1. Install new add-ons and restart Volto:
 
