@@ -59,7 +59,7 @@ div#page-edit, div#page-add {
     background: white;
 }
 
-#page-search .ui.container {
+#page-search {
     background: white;
     padding: 1em;
 }
