@@ -45,9 +45,6 @@ const Footer = ({ intl }) => (
                 <a href="/rankings/redraft-rankings">Re-draft Rankings</a>
               </li>
               <li>
-                <a href="/rankings/dynasty-rankings">Dynasty Rankings</a>
-              </li>
-              <li>
                 <a href="/rankings/top-25-under-25">Top 25 Under 25</a>
               </li>
             </ul>
@@ -63,6 +60,11 @@ const Footer = ({ intl }) => (
               <li>
                 <a href="/leagues/league-rules/draftime-primer">
                   Draftime Primer
+                </a>
+              </li>
+              <li>
+                <a href="/leagues/league-rules/league-settings">
+                  League Settings
                 </a>
               </li>
               <li>
@@ -88,6 +90,9 @@ const Footer = ({ intl }) => (
             <ul>
               <li>
                 <a href="/collectibles/baseball-cards">Baseball Cards</a>
+              </li>
+              <li>
+                <a href="/collectibles/bobbleheads">Bobbleheads</a>
               </li>
               <li>
                 <a href="/collectibles/funko-pops">Funko Pops</a>
