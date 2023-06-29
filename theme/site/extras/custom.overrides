@@ -1,5 +1,6 @@
 @import (less) "~slick-carousel/slick/slick.css";
 @import (less) "~slick-carousel/slick/slick-theme.css";
+@import 'site/components/blocks/teaser.less';
 
 /* Header */
 .logo {font-size:22px;}
