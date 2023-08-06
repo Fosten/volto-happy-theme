@@ -103,7 +103,7 @@ const Footer = ({ intl }) => (
             </div>
             <div className="youtube"></div>
             <div className="twitter">
-              <a href="https://plone.org" target="_blank">
+              <a href="https://plone.org" target="_blank" rel="noreferrer">
                 Powered by Plone
               </a>
             </div>
