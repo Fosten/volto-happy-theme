@@ -4,7 +4,6 @@ import {
   ConditionalLink,
   Component,
   FormattedDate,
-  Creator,
 } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 

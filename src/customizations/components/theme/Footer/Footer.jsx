@@ -4,18 +4,8 @@
  */
 
 import React from 'react';
-import { Container, List, Segment } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
-import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
-
-import { Logo } from '@plone/volto/components';
-
-const messages = defineMessages({
-  copyright: {
-    id: 'Copyright',
-    defaultMessage: 'Copyright',
-  },
-});
+import { Container, Segment } from 'semantic-ui-react';
+import { injectIntl } from 'react-intl';
 
 /**
  * Component to display the footer.
