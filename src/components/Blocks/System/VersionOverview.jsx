@@ -3,10 +3,10 @@
  * @module components/manage/Controlpanels/VersionOverview
  */
 
-import React from "react";
-import { List } from "semantic-ui-react";
+import React from 'react';
+import { List } from 'semantic-ui-react';
 
-import packageJSON from "@plone/volto/../package.json";
+import packageJSON from '@plone/volto/../package.json';
 
 const VersionOverview = ({
   cmf_version,

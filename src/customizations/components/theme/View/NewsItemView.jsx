@@ -3,15 +3,15 @@
  * @module components/theme/View/NewsItemView
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-import { Container, Image } from "semantic-ui-react";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Container, Image } from 'semantic-ui-react';
 import {
   hasBlocksData,
   flattenToAppURL,
   flattenHTMLToAppURL,
-} from "@plone/volto/helpers";
-import RenderBlocks from "@plone/volto/components/theme/View/RenderBlocks";
+} from '@plone/volto/helpers';
+import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
 
 /**
  * NewsItemView view component class.
@@ -41,7 +41,7 @@ const NewsItemView = ({ content }) =>
           alt={content.title}
           title={content.title}
           src={
-            content.image["content-type"] === "image/svg+xml"
+            content.image['content-type'] === 'image/svg+xml'
               ? flattenToAppURL(content.image.download)
               : flattenToAppURL(content.image.scales.mini.download)
           }

@@ -3,19 +3,19 @@
  * @module components/manage/Blocks/Description/Edit
  */
 
-import React, { Component } from "react";
-import { compose } from "redux";
-import PropTypes from "prop-types";
-import { isEqual } from "lodash";
-import { defineMessages, injectIntl } from "react-intl";
-import cx from "classnames";
-import { injectLazyLibs } from "@plone/volto/helpers/Loadable/Loadable";
-import config from "@plone/volto/registry";
+import React, { Component } from 'react';
+import { compose } from 'redux';
+import PropTypes from 'prop-types';
+import { isEqual } from 'lodash';
+import { defineMessages, injectIntl } from 'react-intl';
+import cx from 'classnames';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   description: {
-    id: "Add a description…",
-    defaultMessage: "Add a description…",
+    id: 'Add a description…',
+    defaultMessage: 'Add a description…',
   },
 });
 
@@ -72,12 +72,13 @@ class Edit extends Component {
 
       const blockRenderMap = Map({
         unstyled: {
-          element: "div",
+          element: 'div',
         },
       });
 
-      this.extendedBlockRenderMap =
-        DefaultDraftBlockRenderMap.merge(blockRenderMap);
+      this.extendedBlockRenderMap = DefaultDraftBlockRenderMap.merge(
+        blockRenderMap,
+      );
 
       let editorState;
       if (props.properties && props.properties.description) {
@@ -141,7 +142,7 @@ class Edit extends Component {
       this.props.selected ||
       !isEqual(
         this.props.properties.description,
-        nextProps.properties.description
+        nextProps.properties.description,
       )
     );
   }
@@ -155,8 +156,8 @@ class Edit extends Component {
   onChange(editorState) {
     this.setState({ editorState }, () => {
       this.props.onChangeField(
-        "description",
-        editorState.getCurrentContent().getPlainText()
+        'description',
+        editorState.getCurrentContent().getPlainText(),
       );
     });
   }
@@ -175,7 +176,7 @@ class Edit extends Component {
 
     return (
       <div
-        className={cx("block description", { selected: this.props.selected })}
+        className={cx('block description', { selected: this.props.selected })}
       >
         <Editor
           onChange={this.onChange}
@@ -184,26 +185,26 @@ class Edit extends Component {
           blockRenderMap={this.extendedBlockRenderMap}
           handleReturn={() => {
             if (this.props.data?.disableNewBlocks) {
-              return "handled";
+              return 'handled';
             }
             this.props.onSelectBlock(
               this.props.onAddBlock(
                 config.settings.defaultBlockType,
-                this.props.index + 1
-              )
+                this.props.index + 1,
+              ),
             );
-            return "handled";
+            return 'handled';
           }}
           handleKeyCommand={(command, editorState) => {
             if (
-              command === "backspace" &&
+              command === 'backspace' &&
               editorState.getCurrentContent().getPlainText().length === 0
             ) {
               this.props.onDeleteBlock(this.props.block, true);
             }
           }}
           placeholder={this.props.intl.formatMessage(messages.description)}
-          blockStyleFn={() => "documentDescription"}
+          blockStyleFn={() => 'documentDescription'}
           onUpArrow={() => {
             const selectionState = this.state.editorState.getSelection();
             const { editorState } = this.state;
@@ -234,6 +235,6 @@ class Edit extends Component {
 }
 
 export default compose(
-  injectLazyLibs(["draftJs", "immutableLib", "draftJsImportHtml"]),
-  injectIntl
+  injectLazyLibs(['draftJs', 'immutableLib', 'draftJsImportHtml']),
+  injectIntl,
 )(Edit);

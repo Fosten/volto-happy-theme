@@ -1,18 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   ConditionalLink,
   Component,
   FormattedDate,
   Creator,
-} from "@plone/volto/components";
-import { flattenToAppURL } from "@plone/volto/helpers";
+} from '@plone/volto/components';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
-import { isInternalURL } from "@plone/volto/helpers/Url/Url";
+import { isInternalURL } from '@plone/volto/helpers/Url/Url';
 
 const SummaryTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
   let link = null;
-  let href = linkHref?.[0]?.["@id"] || "";
+  let href = linkHref?.[0]?.['@id'] || '';
 
   if (isInternalURL(href)) {
     link = (
@@ -28,14 +28,14 @@ const SummaryTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
     <>
       <div className="items">
         {items.map((item) => (
-          <div className="listing-item" key={item["@id"]}>
+          <div className="listing-item" key={item['@id']}>
             <ConditionalLink item={item} condition={!isEditMode}>
               <Component componentName="PreviewImage" item={item} alt="" />
               <div className="listing-body">
                 <h3>{item.title ? item.title : item.id}</h3>
-                {item.review_state === "published" &&
+                {item.review_state === 'published' &&
                   item.effective &&
-                  item["@type"] === "News Item" && (
+                  item['@type'] === 'News Item' && (
                     <p className="discreet">
                       {item.Creator} - <FormattedDate date={item.effective} />
                     </p>

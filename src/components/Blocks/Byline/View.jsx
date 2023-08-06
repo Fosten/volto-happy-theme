@@ -3,9 +3,9 @@
  * @module components/manage/Blocks/Description/View
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-import { FormattedDate } from "@plone/volto/components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { FormattedDate } from '@plone/volto/components';
 
 /**
  * View description block class.

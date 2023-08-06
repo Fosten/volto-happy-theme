@@ -1,5 +1,5 @@
-import React from "react";
-import View from "./View";
+import React from 'react';
+import View from './View';
 
 const SystemEdit = (props) => {
   return (

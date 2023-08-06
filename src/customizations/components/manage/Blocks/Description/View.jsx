@@ -3,8 +3,8 @@
  * @module components/manage/Blocks/Description/View
  */
 
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * View description block class.

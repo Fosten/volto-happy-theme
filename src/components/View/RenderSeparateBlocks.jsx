@@ -1,24 +1,24 @@
-import React from "react";
-import { getBaseUrl, applyBlockDefaults } from "@plone/volto/helpers";
-import { defineMessages, injectIntl } from "react-intl";
-import { map } from "lodash";
+import React from 'react';
+import { getBaseUrl, applyBlockDefaults } from '@plone/volto/helpers';
+import { defineMessages, injectIntl } from 'react-intl';
+import { map } from 'lodash';
 import {
   getBlocksFieldname,
   getBlocksLayoutFieldname,
   hasBlocksData,
-} from "@plone/volto/helpers";
-import StyleWrapper from "@plone/volto/components/manage/Blocks/Block/StyleWrapper";
-import config from "@plone/volto/registry";
-import { ViewTextBlock } from "@plone/volto/components";
+} from '@plone/volto/helpers';
+import StyleWrapper from '@plone/volto/components/manage/Blocks/Block/StyleWrapper';
+import config from '@plone/volto/registry';
+import { ViewTextBlock } from '@plone/volto/components';
 
 const messages = defineMessages({
   unknownBlock: {
-    id: "Unknown Block",
-    defaultMessage: "Unknown Block {block}",
+    id: 'Unknown Block',
+    defaultMessage: 'Unknown Block {block}',
   },
   invalidBlock: {
-    id: "Invalid Block",
-    defaultMessage: "Invalid block - Will be removed on saving",
+    id: 'Invalid Block',
+    defaultMessage: 'Invalid block - Will be removed on saving',
   },
 });
 
@@ -33,7 +33,7 @@ const RenderSeparateBlocks = (props) => {
     <CustomTag>
       {map(content[blocksLayoutFieldname].items, (block) => {
         const Block =
-          blocksConfig[content[blocksFieldname]?.[block]?.["@type"]]?.view ||
+          blocksConfig[content[blocksFieldname]?.[block]?.['@type']]?.view ||
           ViewDescriptionBlock2;
         ViewTextBlock;
 
@@ -51,14 +51,14 @@ const RenderSeparateBlocks = (props) => {
               metadata={metadata}
               properties={content}
               data={blockData}
-              path={getBaseUrl(location?.pathname || "")}
+              path={getBaseUrl(location?.pathname || '')}
               blocksConfig={blocksConfig}
             />
           </StyleWrapper>
         ) : blockData ? (
           <div key={block}>
             {intl.formatMessage(messages.unknownBlock, {
-              block: content[blocksFieldname]?.[block]?.["@type"],
+              block: content[blocksFieldname]?.[block]?.['@type'],
             })}
           </div>
         ) : (
@@ -67,7 +67,7 @@ const RenderSeparateBlocks = (props) => {
       })}
     </CustomTag>
   ) : (
-    ""
+    ''
   );
 };
 
