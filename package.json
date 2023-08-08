@@ -22,8 +22,7 @@
     "@eeacms/volto-columns-block": "*",
     "@eeacms/volto-metadata-block": "*",
     "@plone/scripts": "*",
-    "volto-form-block": "*",
-    "volto-subblocks": "^2.0.0"
+    "volto-form-block": "*"
   },
   "devDependencies": {
     "mrs-developer": "*"
