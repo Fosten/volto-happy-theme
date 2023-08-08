@@ -21,10 +21,9 @@
   "dependencies": {
     "@eeacms/volto-columns-block": "*",
     "@eeacms/volto-metadata-block": "*",
-    "@plone/scripts": "*",
     "volto-form-block": "*"
   },
   "devDependencies": {
-    "mrs-developer": "*"
+    "@plone/scripts": "*"
   }
 }
