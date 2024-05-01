@@ -6,11 +6,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Image } from 'semantic-ui-react';
-import {
-  hasBlocksData,
-  flattenToAppURL,
-  flattenHTMLToAppURL,
-} from '@plone/volto/helpers';
+import { hasBlocksData, flattenToAppURL, flattenHTMLToAppURL } from '@plone/volto/helpers';
 import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
 
 /**
@@ -32,22 +28,8 @@ const NewsItemView = ({ content }) =>
           {content.subtitle && ` - ${content.subtitle}`}
         </h1>
       )}
-      {content.description && (
-        <p className="documentDescription">{content.description}</p>
-      )}
-      {content.image && (
-        <Image
-          className="documentImage"
-          alt={content.title}
-          title={content.title}
-          src={
-            content.image['content-type'] === 'image/svg+xml'
-              ? flattenToAppURL(content.image.download)
-              : flattenToAppURL(content.image.scales.mini.download)
-          }
-          floated="right"
-        />
-      )}
+      {content.description && <p className="documentDescription">{content.description}</p>}
+      {content.image && <Image className="documentImage" alt={content.title} title={content.title} src={content.image['content-type'] === 'image/svg+xml' ? flattenToAppURL(content.image.download) : flattenToAppURL(content.image.scales.mini.download)} floated="right" />}
       {content.text && (
         <div
           dangerouslySetInnerHTML={{

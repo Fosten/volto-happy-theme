@@ -5,9 +5,7 @@ import VersionOverview from './VersionOverview';
 
 const SystemView = (props) => {
   const dispatch = useDispatch();
-  const systemInfo = useSelector(
-    (state) => state.controlpanels.systeminformation,
-  );
+  const systemInfo = useSelector((state) => state.controlpanels.systeminformation);
 
   React.useEffect(() => {
     dispatch(getSystemInformation());

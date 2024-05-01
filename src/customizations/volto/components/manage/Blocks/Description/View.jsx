@@ -11,9 +11,7 @@ import PropTypes from 'prop-types';
  * @class View
  * @extends Component
  */
-const View = ({ properties }) => (
-  <p className="documentDescription">{properties.description}</p>
-);
+const View = ({ properties }) => <p className="documentDescription">{properties.description}</p>;
 
 /**
  * Property types.

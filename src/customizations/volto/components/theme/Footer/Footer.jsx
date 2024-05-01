@@ -14,15 +14,7 @@ import { injectIntl } from 'react-intl';
  * @returns {string} Markup of the component
  */
 const Footer = ({ intl }) => (
-  <Segment
-    role="contentinfo"
-    vertical
-    padded
-    inverted
-    color="grey"
-    textAlign="center"
-    id="footer"
-  >
+  <Segment role="contentinfo" vertical padded inverted color="grey" textAlign="center" id="footer">
     <Container>
       <Segment basic inverted color="grey" className="discreet">
         <div className="footersitemap">
@@ -48,14 +40,10 @@ const Footer = ({ intl }) => (
                 <a href="/leagues/league-rules/calendar">Calendar</a>
               </li>
               <li>
-                <a href="/leagues/league-rules/draftime-primer">
-                  Draftime Primer
-                </a>
+                <a href="/leagues/league-rules/draftime-primer">Draftime Primer</a>
               </li>
               <li>
-                <a href="/leagues/league-rules/league-settings">
-                  League Settings
-                </a>
+                <a href="/leagues/league-rules/league-settings">League Settings</a>
               </li>
               <li>
                 <a href="/leagues/standings">Standings</a>
@@ -65,10 +53,7 @@ const Footer = ({ intl }) => (
           <div className="footercol3">
             <div className="logo">
               <a href="/">
-                <img
-                  src="/images/homeplate-logo.png/@@images/image-512-aa2271fd4debd8e30a62ad981b25e556.png"
-                  alt="Homeplate logo"
-                />
+                <img src="/images/homeplate-logo.png/@@images/image-512-aa2271fd4debd8e30a62ad981b25e556.png" alt="Homeplate logo" />
               </a>
               <div className="slogan">"Like a pop fly in the sun."</div>
             </div>

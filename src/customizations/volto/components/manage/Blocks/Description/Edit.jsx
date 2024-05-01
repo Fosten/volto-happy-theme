@@ -76,9 +76,7 @@ class Edit extends Component {
         },
       });
 
-      this.extendedBlockRenderMap = DefaultDraftBlockRenderMap.merge(
-        blockRenderMap,
-      );
+      this.extendedBlockRenderMap = DefaultDraftBlockRenderMap.merge(blockRenderMap);
 
       let editorState;
       if (props.properties && props.properties.description) {
@@ -112,16 +110,10 @@ class Edit extends Component {
    * @returns {undefined}
    */
   UNSAFE_componentWillReceiveProps(nextProps) {
-    if (
-      nextProps.properties.description &&
-      this.props.properties.description !== nextProps.properties.description &&
-      !this.state.focus
-    ) {
+    if (nextProps.properties.description && this.props.properties.description !== nextProps.properties.description && !this.state.focus) {
       const contentState = this.stateFromHTML(nextProps.properties.description);
       this.setState({
-        editorState: nextProps.properties.description
-          ? this.EditorState.createWithContent(contentState)
-          : this.EditorState.createEmpty(),
+        editorState: nextProps.properties.description ? this.EditorState.createWithContent(contentState) : this.EditorState.createEmpty(),
       });
     }
 
@@ -138,13 +130,7 @@ class Edit extends Component {
    * @memberof Edit
    */
   shouldComponentUpdate(nextProps) {
-    return (
-      this.props.selected ||
-      !isEqual(
-        this.props.properties.description,
-        nextProps.properties.description,
-      )
-    );
+    return this.props.selected || !isEqual(this.props.properties.description, nextProps.properties.description);
   }
 
   /**
@@ -155,10 +141,7 @@ class Edit extends Component {
    */
   onChange(editorState) {
     this.setState({ editorState }, () => {
-      this.props.onChangeField(
-        'description',
-        editorState.getCurrentContent().getPlainText(),
-      );
+      this.props.onChangeField('description', editorState.getCurrentContent().getPlainText());
     });
   }
 
@@ -175,9 +158,7 @@ class Edit extends Component {
     const Editor = this.Editor;
 
     return (
-      <div
-        className={cx('block description', { selected: this.props.selected })}
-      >
+      <div className={cx('block description', { selected: this.props.selected })}>
         <Editor
           onChange={this.onChange}
           editorState={this.state.editorState}
@@ -187,19 +168,11 @@ class Edit extends Component {
             if (this.props.data?.disableNewBlocks) {
               return 'handled';
             }
-            this.props.onSelectBlock(
-              this.props.onAddBlock(
-                config.settings.defaultBlockType,
-                this.props.index + 1,
-              ),
-            );
+            this.props.onSelectBlock(this.props.onAddBlock(config.settings.defaultBlockType, this.props.index + 1));
             return 'handled';
           }}
           handleKeyCommand={(command, editorState) => {
-            if (
-              command === 'backspace' &&
-              editorState.getCurrentContent().getPlainText().length === 0
-            ) {
+            if (command === 'backspace' && editorState.getCurrentContent().getPlainText().length === 0) {
               this.props.onDeleteBlock(this.props.block, true);
             }
           }}
@@ -208,20 +181,14 @@ class Edit extends Component {
           onUpArrow={() => {
             const selectionState = this.state.editorState.getSelection();
             const { editorState } = this.state;
-            if (
-              editorState.getCurrentContent().getBlockMap().first().getKey() ===
-              selectionState.getFocusKey()
-            ) {
+            if (editorState.getCurrentContent().getBlockMap().first().getKey() === selectionState.getFocusKey()) {
               this.props.onFocusPreviousBlock(this.props.block, this.node);
             }
           }}
           onDownArrow={() => {
             const selectionState = this.state.editorState.getSelection();
             const { editorState } = this.state;
-            if (
-              editorState.getCurrentContent().getBlockMap().last().getKey() ===
-              selectionState.getFocusKey()
-            ) {
+            if (editorState.getCurrentContent().getBlockMap().last().getKey() === selectionState.getFocusKey()) {
               this.props.onFocusNextBlock(this.props.block, this.node);
             }
           }}
@@ -234,7 +201,4 @@ class Edit extends Component {
   }
 }
 
-export default compose(
-  injectLazyLibs(['draftJs', 'immutableLib', 'draftJsImportHtml']),
-  injectIntl,
-)(Edit);
+export default compose(injectLazyLibs(['draftJs', 'immutableLib', 'draftJsImportHtml']), injectIntl)(Edit);

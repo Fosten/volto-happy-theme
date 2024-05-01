@@ -2,11 +2,7 @@ import React from 'react';
 import { getBaseUrl, applyBlockDefaults } from '@plone/volto/helpers';
 import { defineMessages, injectIntl } from 'react-intl';
 import { map } from 'lodash';
-import {
-  getBlocksFieldname,
-  getBlocksLayoutFieldname,
-  hasBlocksData,
-} from '@plone/volto/helpers';
+import { getBlocksFieldname, getBlocksLayoutFieldname, hasBlocksData } from '@plone/volto/helpers';
 import StyleWrapper from '@plone/volto/components/manage/Blocks/Block/StyleWrapper';
 import config from '@plone/volto/registry';
 import { ViewTextBlock } from '@plone/volto/components';
@@ -32,9 +28,7 @@ const RenderSeparateBlocks = (props) => {
   return hasBlocksData(content) ? (
     <CustomTag>
       {map(content[blocksLayoutFieldname].items, (block) => {
-        const Block =
-          blocksConfig[content[blocksFieldname]?.[block]?.['@type']]?.view ||
-          ViewTextBlock;
+        const Block = blocksConfig[content[blocksFieldname]?.[block]?.['@type']]?.view || ViewTextBlock;
 
         const blockData = applyBlockDefaults({
           data: content[blocksFieldname][block],
@@ -45,14 +39,7 @@ const RenderSeparateBlocks = (props) => {
 
         return Block ? (
           <StyleWrapper key={block} {...props} id={block} data={blockData}>
-            <Block
-              id={block}
-              metadata={metadata}
-              properties={content}
-              data={blockData}
-              path={getBaseUrl(location?.pathname || '')}
-              blocksConfig={blocksConfig}
-            />
+            <Block id={block} metadata={metadata} properties={content} data={blockData} path={getBaseUrl(location?.pathname || '')} blocksConfig={blocksConfig} />
           </StyleWrapper>
         ) : blockData ? (
           <div key={block}>

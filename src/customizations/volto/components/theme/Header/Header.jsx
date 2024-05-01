@@ -8,12 +8,7 @@ import { Container, Segment } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import {
-  LanguageSelector,
-  Logo,
-  Navigation,
-  SearchWidget,
-} from '@plone/volto/components';
+import { LanguageSelector, Logo, Navigation, SearchWidget } from '@plone/volto/components';
 
 /**
  * Header component class.
