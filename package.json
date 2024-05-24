@@ -15,13 +15,11 @@
   },
   "addons": [
     "@eeacms/volto-columns-block",
-    "volto-form-block",
     "@eeacms/volto-metadata-block"
   ],
   "dependencies": {
     "@eeacms/volto-columns-block": "*",
-    "@eeacms/volto-metadata-block": "*",
-    "volto-form-block": "*"
+    "@eeacms/volto-metadata-block": "*"
   },
   "devDependencies": {
     "@plone/scripts": "*"
