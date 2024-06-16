@@ -14,12 +14,10 @@
     "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon"
   },
   "addons": [
-    "@eeacms/volto-columns-block",
-    "@eeacms/volto-metadata-block"
+    "@eeacms/volto-columns-block"
   ],
   "dependencies": {
-    "@eeacms/volto-columns-block": "*",
-    "@eeacms/volto-metadata-block": "*"
+    "@eeacms/volto-columns-block": "*"
   },
   "devDependencies": {
     "@plone/scripts": "*"
