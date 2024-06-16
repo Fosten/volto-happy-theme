@@ -7,7 +7,7 @@ export default function applyConfig(config) {
   config.blocks = {
     ...config.blocks,
     initialBlocks: {
-      'News Item': ['title', 'description', 'byline', 'leadimage', 'text'],
+      'News Item': ['title', 'description', 'byline', 'leadimage', 'slate'],
     },
     blocksConfig: {
       ...config.blocks.blocksConfig,
