@@ -83,7 +83,7 @@ const Footer = ({ intl }) => (
         {/* wrap in div for a11y reasons: listitem role cannot be on the <a> element directly */}
         <div className="footerbar">
           <div className="companyinfo">
-            <div className="email">
+            <div className="site-email">
               <a href="mailto:info@happybaseball.com">info@happybaseball.com</a>
             </div>
             <div className="youtube"></div>
