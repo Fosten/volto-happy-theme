@@ -37,16 +37,16 @@ const Footer = ({ intl }) => (
             </h2>
             <ul>
               <li>
-                <a href="/leagues/league-rules/calendar">Calendar</a>
+                <a href="/leagues/calendars">Calendar</a>
               </li>
               <li>
-                <a href="/leagues/league-rules/draftime-primer">Draftime Primer</a>
+                <a href="/leagues/standings">Standings</a>
               </li>
               <li>
                 <a href="/leagues/league-rules/league-settings">League Settings</a>
               </li>
               <li>
-                <a href="/leagues/standings">Standings</a>
+                <a href="/leagues/league-rules/draftime-primer">Draftime Primer</a>
               </li>
             </ul>
           </div>
