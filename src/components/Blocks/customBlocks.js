@@ -1,5 +1,5 @@
-import BylineView from '@Fosten/volto-happy-theme/components/Blocks/Byline/View';
-import BylineEdit from '@Fosten/volto-happy-theme/components/Blocks/Byline/Edit';
+import BylineView from './Byline/View';
+import BylineEdit from './Byline/Edit';
 import icon from '@plone/volto/icons/list-bullet.svg';
 
 const customBlocks = {
