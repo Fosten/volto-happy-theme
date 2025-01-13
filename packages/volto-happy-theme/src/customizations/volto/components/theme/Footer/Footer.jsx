@@ -109,6 +109,9 @@ const Footer = ({ intl }) => (
             <div className="accessibility">
               <a href="/accessibility">Accessibility</a>
             </div>
+            <div className="rss">
+              <a href="/rss">RSS</a>
+            </div>
             <div className="sitemap">
               <a href="/sitemap">Sitemap</a>
             </div>
