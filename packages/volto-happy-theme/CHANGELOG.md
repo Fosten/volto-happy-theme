@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update CHANGELOG.md [fosten]
 - Bump package.json version to 2.1.0 [fosten]
-- Bump Volto from 18.0.0-alpha.47 to 18.9.2
+- Bump Volto from 18.0.0-alpha.47 to 18.10.1
 - Add RSS to footerbar [fosten]
 
 ## 2.0.0 (2024-10-28)
