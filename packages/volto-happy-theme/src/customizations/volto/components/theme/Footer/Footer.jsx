@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import Image from '@plone/volto/components/theme/Image/Image';
 import { Container, Segment } from 'semantic-ui-react';
 import { injectIntl } from 'react-intl';
 
@@ -65,7 +66,7 @@ const Footer = ({ intl }) => (
           <div className="footercol3">
             <div className="logo">
               <a href="/">
-                <img
+                <Image
                   src="/images/homeplate-logo.png/@@images/image-512-aa2271fd4debd8e30a62ad981b25e556.png"
                   alt="Homeplate logo"
                 />
