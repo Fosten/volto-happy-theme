@@ -15,8 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Replace img tag with Image component [fosten]
+- Add footer links to CHANGELOG.md [fosten]
 - Add Dependabot [fosten]
-- Bump Volto from 18.10.1 to 19.0.0-alpha.9 [fosten]
+- Bump Volto from 18.10.1 to 19.0.0-alpha.26 [fosten]
 
 ## [2.1.0] (2024-03-30)
 
