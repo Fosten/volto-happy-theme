@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Bump pnpm from 9.1.1 to 10.20.0 [fosten]
+- Replace babel-preset-razzle with @plone/babel-preset-razzle [fosten]
 - Replace img tag with Image component [fosten]
 - Add footer links to CHANGELOG.md [fosten]
 - Add Dependabot [fosten]
